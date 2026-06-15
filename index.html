@@ -21,7 +21,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://dxe354spyd3ek.cloudfront.net/assets/traditional/style-2998a50ccd99d96218509094d3f281721c1380c9cc46f47a865edb2a2b46265c.css">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -43,491 +42,273 @@
         "url": "https://siglawpartners.com"
     }
     </script>
-
-    <style>
-        :root {
-            --signature-charcoal: #1e1d1b;
-            --signature-black: #121110;
-            --signature-gold: #c9974a;
-            --signature-gold-light: #efc276;
-            --signature-cream: #f8f4eb;
-            --signature-soft: #f3efe6;
-            --signature-gray: #6f6a61;
-            --signature-border: rgba(201, 151, 74, .32);
-        }
-
-        body {
-            background: var(--signature-cream);
-        }
-
-        a {
-            text-underline-offset: 4px;
-        }
-
-        .skip-link {
-            position: absolute;
-            left: -999px;
-            top: 12px;
-            z-index: 999;
-            background: var(--signature-black);
-            color: #fff;
-            padding: 12px 16px;
-        }
-
-        .skip-link:focus {
-            left: 12px;
-        }
-
-        .main-header {
-            border-bottom: 1px solid var(--signature-border);
-            background: rgba(255, 255, 255, .96);
-        }
-
-        .site-nav {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .site-nav a {
-            color: var(--signature-charcoal);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all .2s ease;
-        }
-
-        .site-nav a:hover,
-        .site-nav a:focus {
-            color: var(--signature-gold);
-            border-bottom-color: var(--signature-gold);
-        }
-
-        .logo img {
-            width: 100%;
-            height: auto;
-        }
-
-        .hero-shell {
-            background:
-                radial-gradient(circle at top center, rgba(201, 151, 74, .22), transparent 34%),
-                linear-gradient(135deg, #151412 0%, #28241d 48%, #10100f 100%);
-            border: 1px solid rgba(201, 151, 74, .28);
-        }
-
-        .hero-logo-wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 76px 20px 42px;
-        }
-
-        .hero-logo {
-            width: 100%;
-            max-width: 620px;
-            height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 18px 34px rgba(0,0,0,.38));
-        }
-
-        .linebar {
-            width: 92px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--signature-gold-light), var(--signature-gold), transparent);
-        }
-
-        .btn,
-        .ghost-btn {
-            border-color: var(--signature-gold) !important;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-        }
-
-        .btn:hover,
-        .ghost-btn:hover {
-            background: var(--signature-gold) !important;
-            color: var(--signature-black) !important;
-        }
-
-        .section-eyebrow {
-            color: var(--signature-gold);
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .landing-card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 28px;
-        }
-
-        .landing-card {
-            background: #fff;
-            padding: 32px 28px;
-            border: 1px solid var(--signature-border);
-            border-radius: 2px;
-            box-shadow: 0 14px 34px rgba(30, 29, 27, .05);
-        }
-
-        .landing-card h3,
-        .landing-card h4 {
-            color: var(--signature-charcoal);
-            font-weight: 700;
-            margin-bottom: 14px;
-            font-size: 22px;
-        }
-
-        .landing-card p {
-            color: var(--signature-gray);
-            line-height: 1.75;
-        }
-
-        .values-section {
-            background: var(--signature-soft);
-        }
-
-        .trust-section {
-            background: #fff;
-            padding: 80px 0;
-        }
-
-        .trust-heading {
-            margin-bottom: 34px;
-            font-family: "Libre Baskerville", serif;
-            font-weight: 700;
-            font-size: clamp(2rem, 4vw, 3.4rem);
-            line-height: 1.08;
-            text-align: center;
-            color: var(--signature-charcoal);
-        }
-
-        .cta-band {
-            background:
-                linear-gradient(rgba(18, 17, 16, .86), rgba(18, 17, 16, .86)),
-                radial-gradient(circle at center, rgba(201, 151, 74, .25), transparent 42%);
-        }
-
-        .contact-panel {
-            background:
-                radial-gradient(circle at top, rgba(239, 194, 118, .14), transparent 32%),
-                linear-gradient(135deg, var(--signature-charcoal), var(--signature-black));
-        }
-
-        .contact-link a,
-        .contact-link {
-            color: var(--signature-gold-light);
-        }
-
-        .footer .heading {
-            color: #fff;
-        }
-
-        .bottom-footer {
-            border-top: 1px solid rgba(201, 151, 74, .24);
-        }
-
-        .policy-list {
-            flex-wrap: wrap;
-            row-gap: .75rem;
-        }
-
-        @media (max-width: 900px) {
-            .landing-card-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .main-header .container {
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .site-nav {
-                width: 100%;
-                justify-content: flex-start;
-                font-size: 13px;
-                line-height: 1.6;
-                padding-top: 1rem;
-            }
-
-            .logo {
-                max-width: 145px;
-            }
-
-            .hero-logo-wrap {
-                padding: 46px 20px 28px;
-            }
-
-            .trust-section {
-                padding: 60px 0;
-            }
-        }
-    </style>
 </head>
 
-<body class="font-baskerville cs-gray-gold">
+<body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<header class="bg-white z-50 md:text-xs lg:text-fs15 font-baskerville tracking-widest">
-    <div class="main-header py-4 relative">
-        <div class="container flex justify-between items-center flex-wrap px-[10px] xl:px-[1.5rem]">
-            <div class="text-left flex items-center gap-x-8">
-                <div class="logo max-w-[170px] relative z-30">
-                    <a href="index.html" aria-label="Signature Law Partners home">
-                        <img src="assets/siglogo.png" alt="Signature Law Partners, PLLC logo" width="170" height="90" decoding="async">
-                    </a>
-                </div>
-            </div>
-
-            <nav class="site-nav relative z-50" aria-label="Primary navigation">
-                <a href="index.html" class="nav-link" aria-current="page">Home</a>
-                <a href="attorneys.html" class="nav-link">Attorneys</a>
-                <a href="practice-areas.html" class="nav-link">Practice Areas</a>
-                <a href="blogs.html" class="nav-link">Blogs</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
+<header class="main-header">
+    <div class="container main-header-inner">
+        <div class="logo">
+            <a href="index.html" aria-label="Signature Law Partners home">
+                <img src="assets/siglogo.png" alt="Signature Law Partners, PLLC logo" width="170" height="90" decoding="async">
+            </a>
         </div>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="attorneys.html">Attorneys</a>
+            <a href="practice-areas.html">Practice Areas</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </div>
 </header>
 
-<main class="main-content" id="main">
-    <section class="hero-sec font-baskerville">
-        <div class="container relative p-0 xl:px-[1.5rem]">
-            <div class="relative hero-shell bg-cover bg-repeat bg-center overflow-hidden">
-                <div class="hero-logo-wrap">
-                    <img src="assets/siglogo.png" alt="Signature Law Partners, PLLC" class="hero-logo" width="620" height="300" fetchpriority="high" decoding="async">
-                </div>
+<main id="main">
+    <section class="hero">
+        <div class="container hero-inner">
+            <img
+                src="assets/siglogo.png"
+                alt="Signature Law Partners, PLLC"
+                class="hero-logo"
+                width="620"
+                height="300"
+                fetchpriority="high"
+                decoding="async"
+            >
 
-                <div class="text-white text-center mx-auto px-5 pb-16">
-                    <span class="mx-auto mb-7 inline-block h-[6px]" aria-hidden="true">
-                        <div class="linebar"></div>
-                    </span>
-
-                    <h1 class="mb-8 text-4xl md:text-3xl xl:text-4xl 2xl:text-4.4xl font-bold font-baskerville">
-                        Strategic counsel for complex legal moments.
-                    </h1>
-
-                    <div class="mb-8 text-lg lg:text-base font-baskerville">
-                        <p>Signature Law Partners, PLLC serves businesses, executives, creators, and individuals who need clear judgment, disciplined advocacy, and practical legal execution.</p>
-                    </div>
-
-                    <a href="contact.html" class="btn w-full md:w-auto dark:focus:bg-transparent dark:hover:bg-[rgba(255,255,255,0.3)] dark:bg-transparent dark:text-[#eee]">
-                        Start a Conversation
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative bg-white py-[60px] md:py-[90px]">
-        <div class="mx-auto max-w-[1030px] px-[15px] text-left">
-            <span class="mx-auto mb-7 inline-block h-[6px]" aria-hidden="true">
+            <div class="divider" aria-hidden="true">
                 <div class="linebar"></div>
-            </span>
+            </div>
 
-            <p class="mb-7 font-baskerville sm:text-base lg:text-base tracking-[0.12em] font-semibold section-eyebrow">
-                Welcome to Signature Law Partners
+            <h1>Strategic counsel for complex legal moments.</h1>
+
+            <p>
+                Signature Law Partners, PLLC serves businesses, executives, creators,
+                and individuals who need clear judgment, disciplined advocacy,
+                and practical legal execution.
             </p>
 
-            <h2 class="mb-8 text-4xl md:text-3xl xl:text-4xl 2xl:text-4.4xl font-bold font-baskerville">
-                A modern legal partner for business, litigation, media, intellectual property, and regulated industries.
-            </h2>
-
-            <div class="default_para font-baskerville mb-8">
-                <p>We provide focused legal strategy, practical risk assessment, and disciplined advocacy for matters where business realities, reputational concerns, regulatory pressure, and legal complexity intersect.</p>
-
-                <p>From the first conversation, we work to understand what is at stake, define the objective, and build a clear path forward.</p>
-            </div>
-
-            <div class="text-right flex flex-wrap md:flex-nowrap gap-x-4 items-center">
-                <a href="practice-areas.html" class="btn w-full md:w-auto order-2 md:order-1">
-                    Explore Our Practice Areas
-                </a>
-            </div>
+            <p>
+                <a href="contact.html" class="btn">Start a Conversation</a>
+            </p>
         </div>
     </section>
 
-    <section class="relative values-section py-[60px] md:py-[90px]">
-        <div class="mx-auto max-w-[1030px] px-[15px]">
-            <span class="mx-auto mb-7 block md:inline-block h-[6px]" aria-hidden="true">
+    <section class="section section-white">
+        <div class="container">
+            <div class="divider" aria-hidden="true">
                 <div class="linebar"></div>
-            </span>
+            </div>
 
-            <h2 class="mb-8 font-baskerville font-bold text-4xl md:text-4.4xl md:text-left">
-                Built around clarity, discretion, and results.
+            <p class="eyebrow">Welcome to Signature Law Partners</p>
+
+            <h2 class="section-title">
+                A modern legal partner for business, litigation, media,
+                intellectual property, and regulated industries.
             </h2>
 
-            <div class="landing-card-grid font-baskerville">
-                <div class="landing-card">
+            <div class="section-lede">
+                <p>
+                    We provide focused legal strategy, practical risk assessment,
+                    and disciplined advocacy for matters where business realities,
+                    reputational concerns, regulatory pressure, and legal complexity intersect.
+                </p>
+
+                <p>
+                    From the first conversation, we work to understand what is at stake,
+                    define the objective, and build a clear path forward.
+                </p>
+            </div>
+
+            <p>
+                <a href="practice-areas.html" class="btn">Explore Our Practice Areas</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-soft">
+        <div class="container">
+            <div class="divider" aria-hidden="true">
+                <div class="linebar"></div>
+            </div>
+
+            <h2 class="section-title">Built around clarity, discretion, and results.</h2>
+
+            <div class="card-grid">
+                <article class="card">
                     <h3>Strategic Perspective</h3>
-                    <p>We look beyond the immediate issue to help clients make decisions that support long-term business, personal, and legal goals.</p>
-                </div>
+                    <p>
+                        We look beyond the immediate issue to help clients make decisions
+                        that support long-term business, personal, and legal goals.
+                    </p>
+                </article>
 
-                <div class="landing-card">
+                <article class="card">
                     <h3>Practical Execution</h3>
-                    <p>Our guidance is direct, actionable, and grounded in the real-world pressures clients face when outcomes matter.</p>
-                </div>
+                    <p>
+                        Our guidance is direct, actionable, and grounded in the real-world
+                        pressures clients face when outcomes matter.
+                    </p>
+                </article>
 
-                <div class="landing-card">
+                <article class="card">
                     <h3>Trusted Partnership</h3>
-                    <p>We build relationships with clients who value responsiveness, preparation, sound judgment, and clear communication.</p>
-                </div>
+                    <p>
+                        We build relationships with clients who value responsiveness,
+                        preparation, sound judgment, and clear communication.
+                    </p>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="trust-section font-baskerville" aria-label="Firm approach">
-        <div class="mx-auto max-w-[1030px] px-[15px]">
-            <span class="mx-auto mb-7 block h-[6px]" aria-hidden="true">
+    <section class="section section-white" aria-label="Firm approach">
+        <div class="container">
+            <div class="divider" aria-hidden="true">
                 <div class="linebar"></div>
-            </span>
+            </div>
 
-            <h2 class="trust-heading">
-                Counsel built for high-stakes decisions.
-            </h2>
+            <h2 class="section-title">Counsel built for high-stakes decisions.</h2>
 
-            <div class="landing-card-grid font-baskerville">
-                <div class="landing-card">
+            <div class="card-grid">
+                <article class="card">
                     <h3>Clear Risk Assessment</h3>
-                    <p>We help clients understand legal exposure, business consequences, and practical options before decisions are made.</p>
-                </div>
+                    <p>
+                        We help clients understand legal exposure, business consequences,
+                        and practical options before decisions are made.
+                    </p>
+                </article>
 
-                <div class="landing-card">
+                <article class="card">
                     <h3>Discreet Representation</h3>
-                    <p>We handle sensitive matters with discipline, confidentiality, and attention to reputational impact.</p>
-                </div>
+                    <p>
+                        We handle sensitive matters with discipline, confidentiality,
+                        and attention to reputational impact.
+                    </p>
+                </article>
 
-                <div class="landing-card">
+                <article class="card">
                     <h3>Decisive Execution</h3>
-                    <p>We focus on strategy, preparation, and communication so clients can move forward with confidence.</p>
-                </div>
+                    <p>
+                        We focus on strategy, preparation, and communication so clients
+                        can move forward with confidence.
+                    </p>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="relative cta-band bg-auto bg-center pt-15 pb-20">
-        <div class="container text-center">
-            <h2 class="mb-8 text-4xl text-on-bg md:text-3xl xl:text-4xl 2xl:text-4.4xl font-bold font-baskerville">
+    <section class="section cta-band">
+        <div class="container">
+            <h2>
                 Complex issues require more than answers.<br>
                 They require judgment.
             </h2>
 
-            <div class="text-right flex flex-wrap md:flex-nowrap gap-x-4 items-center justify-center">
-                <a href="practice-areas.html" class="btn w-full md:w-auto order-2 md:order-1">Explore Our Work</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative py-[60px] bg-white md:py-[90px]">
-        <div class="mx-auto max-w-[1030px] px-[15px]">
-            <span class="mx-auto mb-7 block md:inline-block h-[6px]" aria-hidden="true">
-                <div class="linebar"></div>
-            </span>
-
-            <p class="mb-7 font-baskerville sm:text-base lg:text-base tracking-[0.12em] font-semibold section-eyebrow md:text-left">
-                The Signature Approach
+            <p>
+                Signature Law Partners helps clients move through consequential legal
+                matters with structure, strategy, and confidence.
             </p>
 
-            <h2 class="mb-8 text-4xl md:text-3xl xl:text-4xl 2xl:text-4.4xl font-bold font-baskerville md:text-left">
-                We bring structure to uncertainty.
-            </h2>
-
-            <div class="default_para font-baskerville mb-8">
-                <p>Legal challenges often arrive with urgency, ambiguity, and competing priorities. Our role is to help clients slow the noise, identify the essential risks, and act with confidence.</p>
-
-                <p>We approach each engagement with preparation, discretion, and a commitment to delivering counsel that is not only legally sound, but commercially and personally useful.</p>
-            </div>
-
-            <div class="text-right flex flex-wrap md:flex-nowrap gap-x-4 items-center">
-                <a href="attorneys.html" class="btn w-full md:w-auto order-2 md:order-1">Meet the Firm</a>
-            </div>
+            <a href="practice-areas.html" class="btn">Explore Our Work</a>
         </div>
     </section>
 
-    <section class="relative contact-panel pt-12 md:py-15">
-        <div class="container p-0">
-            <div class="mx-auto max-w-[1203px] items-center flex justify-center flex-wrap md:flex-nowrap">
-                <div class="relative text-center px-5 mb-8">
-                    <h2 class="mb-11 text-4xl md:text-3xl xl:text-4xl 2xl:text-4.4xl font-bold font-baskerville text-white">
-                        Ready to discuss your matter?
-                    </h2>
-
-                    <span class="mx-auto mb-11 inline-block h-[6px]" aria-hidden="true">
-                        <div class="linebar"></div>
-                    </span>
-
-                    <p class="text-lg text-on-dark-bg font-bold">Call us</p>
-
-                    <p class="contact-link text-[34px] mb-11">
-                        <a href="tel:+18557445291" class="hover:text-orgcolor transition-all">(855) SIGLAW1</a>
-                    </p>
-
-                    <p class="mb-[8px] default_para font-baskerville text-white">
-                        Nationwide — Headquartered in<br>
-                        Colorado Springs, CO 80916
-                    </p>
-
-                    <div class="mt-8">
-                        <a href="contact.html" class="ghost-btn w-full md:w-auto text-xs1 md:text-fs15 order-1 md:order-3 mb-11 md:max-w-[180px] md:mx-auto">
-                            Contact Us
-                        </a>
-                    </div>
-
-                    <a href="mailto:admin@siglawpartners.com" class="hover:text-orgcolor contact-link transition-all">
-                        admin@siglawpartners.com
-                    </a>
-                </div>
+    <section class="section section-white">
+        <div class="container">
+            <div class="divider" aria-hidden="true">
+                <div class="linebar"></div>
             </div>
+
+            <p class="eyebrow">The Signature Approach</p>
+
+            <h2 class="section-title">We bring structure to uncertainty.</h2>
+
+            <div class="section-lede">
+                <p>
+                    Legal challenges often arrive with urgency, ambiguity, and competing
+                    priorities. Our role is to help clients slow the noise, identify
+                    the essential risks, and act with confidence.
+                </p>
+
+                <p>
+                    We approach each engagement with preparation, discretion, and a
+                    commitment to delivering counsel that is not only legally sound,
+                    but commercially and personally useful.
+                </p>
+            </div>
+
+            <p>
+                <a href="attorneys.html" class="btn">Meet the Firm</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section contact-panel">
+        <div class="container">
+            <h2>Ready to discuss your matter?</h2>
+
+            <div class="divider" aria-hidden="true">
+                <div class="linebar"></div>
+            </div>
+
+            <p><strong>Call us</strong></p>
+
+            <p>
+                <a href="tel:+18557445291">(855) SIGLAW1</a>
+            </p>
+
+            <p>
+                Nationwide — Headquartered in<br>
+                Colorado Springs, CO 80916
+            </p>
+
+            <p>
+                <a href="contact.html" class="ghost-btn">Contact Us</a>
+            </p>
+
+            <p>
+                <a href="mailto:admin@siglawpartners.com">admin@siglawpartners.com</a>
+            </p>
         </div>
     </section>
 </main>
 
-<footer class="footer text-white">
-    <div class="relative bg-img-footer bg-cover bg-auto bg-center overflow-hidden pb-23 pt-23 md:py-12">
-        <div class="container text-center z-40 relative">
-            <div class="font-baskerville">
-                <h2 class="heading">Signature Law Partners, PLLC</h2>
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>
+            <img
+                src="assets/siglogo.png"
+                alt="Signature Law Partners, PLLC"
+                class="footer-logo"
+                width="180"
+                height="95"
+                decoding="async"
+            >
 
-                <nav aria-label="Footer navigation">
-                    <ul class="mb-8 md:flex md:items-center text-center text-lg md:justify-center md:gap-x-8 md:flex-nowrap font-bold">
-                        <li class="mb-3 md:mb-0">
-                            <a href="index.html" class="transition-all contact-link">Home</a>
-                        </li>
-                        <li class="mb-3 md:mb-0">
-                            <a href="attorneys.html" class="transition-all contact-link">Attorneys</a>
-                        </li>
-                        <li class="mb-3 md:mb-0">
-                            <a href="practice-areas.html" class="transition-all contact-link">Practice Areas</a>
-                        </li>
-                        <li class="mb-3 md:mb-0">
-                            <a href="blogs.html" class="transition-all contact-link">Blogs</a>
-                        </li>
-                        <li class="mb-3 md:mb-0">
-                            <a href="contact.html" class="transition-all contact-link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <p>Strategic legal counsel for complex matters.</p>
         </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="attorneys.html">Attorneys</a>
+            <a href="practice-areas.html">Practice Areas</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </div>
 
-    <div class="bottom-footer text-fs15 font-baskerville bg-f_bg py-8">
-        <div class="container flex items-left lg:gap-x-10 xl:gap-x-20 flex-wrap lg:flex-nowrap text-left lg:text-left">
-            <div class="w-full lg:w-9/12 2xl:w-10/12 mb-8 lg:mb-0">
-                <ul class="flex items-left gap-x-6 policy-list">
-                    <li>©2026 Signature Law Partners, PLLC</li>
-                    <li><a class="client-link flex gap-x-3" href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a class="client-link flex gap-x-3" href="/terms-and-conditions">Terms and Conditions</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="container footer-bottom">
+        <p>
+            ©2026 Signature Law Partners, PLLC ·
+            <a href="/privacy-policy">Privacy Policy</a> ·
+            <a href="/terms-and-conditions">Terms and Conditions</a>
+        </p>
     </div>
 </footer>
 
 <script src="site.js"></script>
 </body>
 </html>
-
