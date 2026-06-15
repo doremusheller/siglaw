@@ -65,10 +65,6 @@ main {
     display: block;
 }
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
 .skip-link {
     position: absolute;
     left: -9999px;
@@ -82,10 +78,6 @@ main {
 .skip-link:focus {
     left: 12px;
 }
-
-/* =========================================================
-   LAYOUT
-========================================================= */
 
 .container {
     width: min(var(--container), calc(100% - 40px));
@@ -112,10 +104,6 @@ main {
 .section-white {
     background: #fff;
 }
-
-/* =========================================================
-   HEADER
-========================================================= */
 
 .main-header {
     background: rgba(255,255,255,.96);
@@ -170,10 +158,6 @@ main {
     color: var(--signature-gold);
 }
 
-/* =========================================================
-   HERO
-========================================================= */
-
 .hero {
     position: relative;
     overflow: hidden;
@@ -213,10 +197,6 @@ main {
     color: var(--signature-gold-light);
 }
 
-/* =========================================================
-   DIVIDER
-========================================================= */
-
 .linebar {
     width: 92px;
     height: 3px;
@@ -233,10 +213,6 @@ main {
 .divider {
     margin: 0 auto 34px;
 }
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
 
 .eyebrow {
     color: var(--signature-gold);
@@ -258,10 +234,6 @@ main {
     font-size: 1.1rem;
     max-width: 760px;
 }
-
-/* =========================================================
-   BUTTONS
-========================================================= */
 
 .btn,
 .button,
@@ -300,10 +272,6 @@ main {
     color: var(--signature-black);
 }
 
-/* =========================================================
-   CARDS
-========================================================= */
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -331,10 +299,6 @@ main {
 .card p {
     color: var(--signature-gray);
 }
-
-/* =========================================================
-   ATTORNEY DIRECTORY CARDS
-========================================================= */
 
 .attorney-grid {
     display: grid;
@@ -408,60 +372,13 @@ main {
     color: var(--signature-gold);
 }
 
-/* =========================================================
-   ATTORNEY PROFILE PAGES
-========================================================= */
-
 .profile-grid {
     width: min(100%, 1120px);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 360px minmax(0, 1fr);
     gap: 32px;
-    align-items: start;
-}
-
-.profile-grid .attorney-card {
-    align-self: start;
-}
-
-.profile-grid .attorney-card:hover,
-.profile-grid .card:hover {
-    transform: none;
-}
-
-.profile-grid .attorney-photo {
-    height: auto;
-    overflow: visible;
-    background: #fff;
-}
-
-.profile-grid .attorney-photo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center center;
-    transform: none;
-}
-
-.profile-grid .attorney-card:hover img {
-    transform: none;
-}
-
-.profile-grid .card {
-    align-self: start;
-    min-height: auto;
-    height: auto;
-    box-shadow: var(--shadow-md);
-    padding: 42px;
-}
-
-.profile-grid .card p {
-    max-width: 72ch;
-}
-
-.profile-grid .attorney-content {
-    padding: 32px;
+    align-items: stretch;
 }
 
 .profile-photo {
@@ -469,12 +386,32 @@ main {
     border: 1px solid var(--signature-border);
     box-shadow: var(--shadow-md);
     overflow: hidden;
+    height: 100%;
+    min-height: 100%;
 }
 
 .profile-photo img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.profile-grid .card {
+    align-self: stretch;
+    min-height: auto;
+    height: auto;
+    box-shadow: var(--shadow-md);
+    padding: 42px;
+}
+
+.profile-grid .card:hover {
+    transform: none;
+}
+
+.profile-grid .card p {
+    max-width: 72ch;
 }
 
 .profile-summary {
@@ -487,10 +424,6 @@ main {
     transform: none;
 }
 
-/* =========================================================
-   VIDEO
-========================================================= */
-
 .video-panel {
     background: #fff;
     border: 1px solid var(--signature-border);
@@ -502,10 +435,6 @@ main {
     width: 100%;
     display: block;
 }
-
-/* =========================================================
-   CTA BAND
-========================================================= */
 
 .cta-band {
     text-align: center;
@@ -526,10 +455,6 @@ main {
     color: rgba(255,255,255,.85);
 }
 
-/* =========================================================
-   CONTACT SECTION
-========================================================= */
-
 .contact-panel {
     background:
         radial-gradient(circle at top, rgba(239,194,118,.14), transparent 32%),
@@ -545,10 +470,6 @@ main {
 .contact-panel a {
     color: var(--signature-gold-light);
 }
-
-/* =========================================================
-   FOOTER
-========================================================= */
 
 .footer {
     background: #fff;
@@ -609,10 +530,6 @@ main {
     margin: 0 auto;
 }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
 @media (max-width: 1000px) {
 
     .card-grid,
@@ -653,23 +570,22 @@ main {
         height: 360px;
     }
 
-    .profile-grid .attorney-card,
-    .profile-grid .card {
-        height: auto;
-    }
-
-    .profile-grid .attorney-photo {
-        height: auto;
-    }
-
-    .profile-grid .attorney-photo img {
-        height: auto;
-        object-fit: contain;
-    }
-
     .profile-photo {
+        height: auto;
+        min-height: 0;
         max-width: 520px;
         margin: 0 auto;
+    }
+
+    .profile-photo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .profile-grid .card {
+        height: auto;
     }
 
     .footer-inner {
