@@ -8,6 +8,7 @@
    - practice-areas.html
    - blogs.html
    - contact.html
+   - attorney profile pages
 ========================================================= */
 
 :root {
@@ -404,7 +405,7 @@ main{
 }
 
 /* =========================================================
-   ATTORNEY CARDS
+   ATTORNEY DIRECTORY CARDS
 ========================================================= */
 
 .attorney-grid{
@@ -441,6 +442,7 @@ main{
     height:100%;
 
     object-fit:cover;
+    object-position:center top;
 
     transition:.35s ease;
 }
@@ -488,6 +490,64 @@ main{
 .attorney-meta span::before{
     content:"— ";
     color:var(--signature-gold);
+}
+
+/* =========================================================
+   ATTORNEY PROFILE PAGES
+========================================================= */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:minmax(300px,420px) minmax(0,1fr);
+    gap:40px;
+    align-items:start;
+}
+
+.profile-grid .card{
+    height:auto;
+}
+
+.profile-photo{
+    background:#fff;
+    border:1px solid var(--signature-border);
+    box-shadow:var(--shadow-md);
+    padding:0;
+    overflow:hidden;
+}
+
+.profile-photo img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    object-position:center center;
+}
+
+.profile-summary{
+    background:#fff;
+    border:1px solid var(--signature-border);
+    box-shadow:var(--shadow-md);
+    overflow:hidden;
+}
+
+.profile-summary .attorney-photo{
+    height:auto;
+    overflow:visible;
+}
+
+.profile-summary .attorney-photo img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    object-position:center center;
+}
+
+.profile-summary:hover{
+    transform:none;
+}
+
+.profile-summary:hover img{
+    transform:none;
 }
 
 /* =========================================================
@@ -591,22 +651,33 @@ main{
     border-top:1px solid var(--signature-border);
 
     padding:60px 0 40px;
+
+    text-align:center;
 }
 
 .footer-inner{
     display:flex;
-    justify-content:space-between;
-    gap:40px;
-    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
 }
 
 .footer-logo{
     width:180px;
-    margin-bottom:14px;
+    margin:0 auto 14px;
+}
+
+.footer-inner p{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--signature-gray);
 }
 
 .footer-links{
     display:flex;
+    justify-content:center;
+    align-items:center;
     gap:22px;
     flex-wrap:wrap;
 }
@@ -618,6 +689,11 @@ main{
     font-weight:700;
 }
 
+.footer-links a:hover,
+.footer-links a:focus{
+    color:var(--signature-gold);
+}
+
 .footer-bottom{
     margin-top:40px;
     padding-top:20px;
@@ -627,6 +703,12 @@ main{
     color:var(--signature-gray);
 
     font-size:.9rem;
+
+    text-align:center;
+}
+
+.footer-bottom p{
+    margin:0 auto;
 }
 
 /* =========================================================
@@ -638,6 +720,11 @@ main{
     .card-grid,
     .attorney-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .profile-grid{
+        grid-template-columns:minmax(260px,360px) minmax(0,1fr);
+        gap:32px;
     }
 
 }
@@ -660,7 +747,8 @@ main{
     }
 
     .card-grid,
-    .attorney-grid{
+    .attorney-grid,
+    .profile-grid{
         grid-template-columns:1fr;
     }
 
@@ -668,8 +756,22 @@ main{
         height:360px;
     }
 
+    .profile-photo{
+        max-width:520px;
+        margin:0 auto;
+    }
+
+    .profile-summary .attorney-photo{
+        height:auto;
+    }
+
     .footer-inner{
         flex-direction:column;
+    }
+
+    .footer-links{
+        flex-direction:column;
+        gap:12px;
     }
 
 }
