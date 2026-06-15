@@ -1,4 +1,3 @@
-
 /* =========================================================
    SIGNATURE LAW PARTNERS
    GLOBAL SITE STYLES
@@ -23,33 +22,33 @@
 
 *,
 *::before,
-*::after{
-    box-sizing:border-box;
+*::after {
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    margin:0;
-    padding:0;
-    background:var(--signature-cream);
-    color:var(--signature-charcoal);
-    font-family:"Libre Baskerville", serif;
-    line-height:1.7;
-    overflow-x:hidden;
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--signature-cream);
+    color: var(--signature-charcoal);
+    font-family: "Libre Baskerville", serif;
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
-img{
-    display:block;
-    max-width:100%;
-    height:auto;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 p,
@@ -58,196 +57,206 @@ h2,
 h3,
 h4,
 h5,
-h6{
-    margin-top:0;
+h6 {
+    margin-top: 0;
 }
 
-main{
-    display:block;
+main {
+    display: block;
 }
 
 /* =========================================================
    ACCESSIBILITY
 ========================================================= */
 
-.skip-link{
-    position:absolute;
-    left:-9999px;
-    top:12px;
-    background:var(--signature-black);
-    color:#fff;
-    padding:12px 16px;
-    z-index:9999;
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 12px;
+    background: var(--signature-black);
+    color: #fff;
+    padding: 12px 16px;
+    z-index: 9999;
 }
 
-.skip-link:focus{
-    left:12px;
+.skip-link:focus {
+    left: 12px;
 }
 
 /* =========================================================
    LAYOUT
 ========================================================= */
 
-.container{
-    width:min(var(--container), calc(100% - 40px));
-    margin:0 auto;
+.container {
+    width: min(var(--container), calc(100% - 40px));
+    margin: 0 auto;
 }
 
-.section{
-    padding:90px 0;
+.section {
+    padding: 90px 0;
 }
 
-.section-tight{
-    padding:70px 0;
+.section-tight {
+    padding: 70px 0;
 }
 
-.section-dark{
-    background:var(--signature-charcoal);
-    color:#fff;
+.section-dark {
+    background: var(--signature-charcoal);
+    color: #fff;
 }
 
-.section-soft{
-    background:var(--signature-soft);
+.section-soft {
+    background: var(--signature-soft);
 }
 
-.section-white{
-    background:#fff;
+.section-white {
+    background: #fff;
 }
 
 /* =========================================================
    HEADER
 ========================================================= */
 
-.main-header{
-    background:rgba(255,255,255,.96);
-    border-bottom:1px solid var(--signature-border);
-    position:sticky;
-    top:0;
-    z-index:1000;
-    backdrop-filter:blur(12px);
+.main-header {
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--signature-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
 }
 
-.main-header-inner{
-    min-height:90px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
+.main-header-inner {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.logo{
-    max-width:170px;
+.logo {
+    max-width: 170px;
 }
 
-.logo img{
-    width:100%;
+.logo img {
+    width: 100%;
 }
 
-.site-nav{
-    display:flex;
-    align-items:center;
-    gap:26px;
-    flex-wrap:wrap;
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
 }
 
-.site-nav a{
-    font-size:.82rem;
-    text-transform:uppercase;
-    letter-spacing:.16em;
-    font-weight:700;
-    color:var(--signature-charcoal);
-    transition:var(--transition);
-    border-bottom:1px solid transparent;
-    padding-bottom:4px;
+.site-nav a {
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-weight: 700;
+    color: var(--signature-charcoal);
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
 }
 
 .site-nav a:hover,
-.site-nav a:focus{
-    color:var(--signature-gold);
-    border-bottom-color:var(--signature-gold);
+.site-nav a:focus {
+    color: var(--signature-gold);
+    border-bottom-color: var(--signature-gold);
 }
 
-.site-nav a[aria-current="page"]{
-    color:var(--signature-gold);
+.site-nav a[aria-current="page"] {
+    color: var(--signature-gold);
 }
 
 /* =========================================================
    HERO
 ========================================================= */
 
-.hero{
-    position:relative;
-    overflow:hidden;
+.hero {
+    position: relative;
+    overflow: hidden;
     background:
         radial-gradient(circle at top center, rgba(201,151,74,.22), transparent 35%),
         linear-gradient(135deg, #151412 0%, #28241d 50%, #10100f 100%);
-    border-bottom:1px solid rgba(201,151,74,.25);
+    border-bottom: 1px solid rgba(201,151,74,.25);
 }
 
-.hero-inner{
-    padding:90px 0 110px;
-    text-align:center;
+.hero-inner {
+    padding: 82px 0 92px;
+    text-align: center;
 }
 
-.hero-logo{
-    width:100%;
-    max-width:620px;
-    margin:0 auto 40px;
-    filter:drop-shadow(0 18px 34px rgba(0,0,0,.38));
+.hero-logo {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto 40px;
+    filter: drop-shadow(0 18px 34px rgba(0,0,0,.38));
 }
 
-.hero h1{
-    color:#fff;
-    font-size:clamp(2.7rem,5vw,4.6rem);
-    line-height:1.08;
-    margin-bottom:24px;
+.hero h1 {
+    color: #fff;
+    font-size: clamp(2.7rem, 5vw, 4.6rem);
+    line-height: 1.08;
+    margin-bottom: 24px;
 }
 
-.hero p{
-    color:rgba(255,255,255,.86);
-    max-width:860px;
-    margin:0 auto;
-    font-size:1.15rem;
+.hero p {
+    color: rgba(255,255,255,.86);
+    max-width: 860px;
+    margin: 0 auto 18px;
+    font-size: 1.15rem;
+}
+
+.hero .eyebrow {
+    color: var(--signature-gold-light);
 }
 
 /* =========================================================
    DIVIDER
 ========================================================= */
 
-.linebar{
-    width:92px;
-    height:3px;
-    margin:0 auto;
-    background:linear-gradient(90deg, transparent, var(--signature-gold-light), var(--signature-gold), transparent);
+.linebar {
+    width: 92px;
+    height: 3px;
+    margin: 0 auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--signature-gold-light),
+        var(--signature-gold),
+        transparent
+    );
 }
 
-.divider{
-    margin:0 auto 34px;
+.divider {
+    margin: 0 auto 34px;
 }
 
 /* =========================================================
    TYPOGRAPHY
 ========================================================= */
 
-.eyebrow{
-    color:var(--signature-gold);
-    text-transform:uppercase;
-    letter-spacing:.18em;
-    font-size:.8rem;
-    font-weight:700;
-    margin-bottom:18px;
+.eyebrow {
+    color: var(--signature-gold);
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-.section-title{
-    font-size:clamp(2.3rem,4vw,4rem);
-    line-height:1.15;
-    margin-bottom:24px;
+.section-title {
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 24px;
 }
 
-.section-lede{
-    color:var(--signature-gray);
-    font-size:1.1rem;
-    max-width:760px;
+.section-lede {
+    color: var(--signature-gray);
+    font-size: 1.1rem;
+    max-width: 760px;
 }
 
 /* =========================================================
@@ -256,434 +265,436 @@ main{
 
 .btn,
 .button,
-.ghost-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:56px;
-    padding:0 28px;
-    border:1px solid var(--signature-gold);
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    font-size:.78rem;
-    font-weight:700;
-    transition:var(--transition);
-    cursor:pointer;
+.ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 28px;
+    border: 1px solid var(--signature-gold);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .78rem;
+    font-weight: 700;
+    transition: var(--transition);
+    cursor: pointer;
 }
 
-.btn{
-    background:var(--signature-gold);
-    color:var(--signature-black);
+.btn {
+    background: var(--signature-gold);
+    color: var(--signature-black);
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-    background:var(--signature-gold-light);
+.btn:hover {
+    transform: translateY(-2px);
+    background: var(--signature-gold-light);
 }
 
-.ghost-btn{
-    background:transparent;
-    color:#fff;
+.ghost-btn {
+    background: transparent;
+    color: #fff;
 }
 
-.ghost-btn:hover{
-    background:var(--signature-gold);
-    color:var(--signature-black);
+.ghost-btn:hover {
+    background: var(--signature-gold);
+    color: var(--signature-black);
 }
 
 /* =========================================================
    CARDS
 ========================================================= */
 
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 28px;
 }
 
-.card{
-    background:#fff;
-    border:1px solid var(--signature-border);
-    box-shadow:var(--shadow-sm);
-    padding:32px;
-    transition:var(--transition);
+.card {
+    background: #fff;
+    border: 1px solid var(--signature-border);
+    box-shadow: var(--shadow-sm);
+    padding: 32px;
+    transition: var(--transition);
 }
 
-.card:hover{
-    transform:translateY(-4px);
-    box-shadow:var(--shadow-md);
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
-.card h3{
-    font-size:1.5rem;
-    margin-bottom:16px;
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
 }
 
-.card p{
-    color:var(--signature-gray);
+.card p {
+    color: var(--signature-gray);
 }
 
 /* =========================================================
    ATTORNEY DIRECTORY CARDS
 ========================================================= */
 
-.attorney-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+.attorney-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 28px;
 }
 
-.attorney-card{
-    background:#fff;
-    border:1px solid var(--signature-border);
-    box-shadow:var(--shadow-md);
-    overflow:hidden;
-    transition:var(--transition);
+.attorney-card {
+    background: #fff;
+    border: 1px solid var(--signature-border);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
 }
 
-.attorney-card:hover{
-    transform:translateY(-6px);
+.attorney-card:hover {
+    transform: translateY(-6px);
 }
 
-.attorney-photo{
-    height:420px;
-    overflow:hidden;
-    background:#e9e2d7;
+.attorney-photo {
+    height: 420px;
+    overflow: hidden;
+    background: #e9e2d7;
 }
 
-.attorney-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
-    transition:.35s ease;
+.attorney-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: .35s ease;
 }
 
-.attorney-card:hover img{
-    transform:scale(1.03);
+.attorney-card:hover img {
+    transform: scale(1.03);
 }
 
-.attorney-content{
-    padding:32px;
+.attorney-content {
+    padding: 32px;
 }
 
-.attorney-role{
-    color:var(--signature-gold);
-    font-size:.75rem;
-    text-transform:uppercase;
-    letter-spacing:.16em;
-    font-weight:700;
+.attorney-role {
+    color: var(--signature-gold);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-weight: 700;
 }
 
-.attorney-name{
-    font-size:2rem;
-    line-height:1.05;
-    margin:14px 0 18px;
+.attorney-name {
+    font-size: 2rem;
+    line-height: 1.05;
+    margin: 14px 0 18px;
 }
 
-.attorney-content p{
-    color:var(--signature-gray);
+.attorney-content p {
+    color: var(--signature-gray);
 }
 
-.attorney-meta{
-    margin-top:24px;
-    padding-top:20px;
-    border-top:1px solid rgba(0,0,0,.08);
-    display:grid;
-    gap:10px;
-    font-size:.92rem;
+.attorney-meta {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,.08);
+    display: grid;
+    gap: 10px;
+    font-size: .92rem;
 }
 
-.attorney-meta span::before{
-    content:"— ";
-    color:var(--signature-gold);
+.attorney-meta span::before {
+    content: "— ";
+    color: var(--signature-gold);
 }
 
 /* =========================================================
    ATTORNEY PROFILE PAGES
 ========================================================= */
 
-.profile-grid{
-    display:grid;
-    grid-template-columns:minmax(320px,400px) minmax(0,1fr);
-    gap:28px;
-    align-items:stretch;
+.profile-grid {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
 }
 
-.profile-grid .attorney-card,
-.profile-grid .card{
-    height:100%;
+.profile-grid .attorney-card {
+    align-self: start;
 }
 
 .profile-grid .attorney-card:hover,
-.profile-grid .card:hover{
-    transform:none;
+.profile-grid .card:hover {
+    transform: none;
 }
 
-.profile-grid .attorney-photo{
-    height:auto;
-    overflow:visible;
-    background:#fff;
+.profile-grid .attorney-photo {
+    height: auto;
+    overflow: visible;
+    background: #fff;
 }
 
-.profile-grid .attorney-photo img{
-    width:100%;
-    height:auto;
-    object-fit:contain;
-    object-position:center center;
-    transform:none;
+.profile-grid .attorney-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    transform: none;
 }
 
-.profile-grid .attorney-card:hover img{
-    transform:none;
+.profile-grid .attorney-card:hover img {
+    transform: none;
 }
 
-.profile-grid .card{
-    box-shadow:var(--shadow-md);
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
+.profile-grid .card {
+    align-self: start;
+    min-height: auto;
+    height: auto;
+    box-shadow: var(--shadow-md);
+    padding: 42px;
 }
 
-.profile-grid .card p{
-    max-width:62ch;
+.profile-grid .card p {
+    max-width: 72ch;
 }
 
-.profile-grid .attorney-content{
-    padding:32px;
+.profile-grid .attorney-content {
+    padding: 32px;
 }
 
-.profile-photo{
-    background:#fff;
-    border:1px solid var(--signature-border);
-    box-shadow:var(--shadow-md);
-    overflow:hidden;
+.profile-photo {
+    background: #fff;
+    border: 1px solid var(--signature-border);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
 }
 
-.profile-photo img{
-    width:100%;
-    height:auto;
-    display:block;
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.profile-summary{
-    background:#fff;
-    border:1px solid var(--signature-border);
-    box-shadow:var(--shadow-md);
+.profile-summary {
+    background: #fff;
+    border: 1px solid var(--signature-border);
+    box-shadow: var(--shadow-md);
 }
 
-.profile-summary:hover{
-    transform:none;
+.profile-summary:hover {
+    transform: none;
 }
 
 /* =========================================================
    VIDEO
 ========================================================= */
 
-.video-panel{
-    background:#fff;
-    border:1px solid var(--signature-border);
-    box-shadow:var(--shadow-md);
-    padding:20px;
+.video-panel {
+    background: #fff;
+    border: 1px solid var(--signature-border);
+    box-shadow: var(--shadow-md);
+    padding: 20px;
 }
 
-.video-panel video{
-    width:100%;
-    display:block;
+.video-panel video {
+    width: 100%;
+    display: block;
 }
 
 /* =========================================================
    CTA BAND
 ========================================================= */
 
-.cta-band{
-    text-align:center;
+.cta-band {
+    text-align: center;
     background:
         linear-gradient(rgba(18,17,16,.88), rgba(18,17,16,.88)),
         radial-gradient(circle, rgba(201,151,74,.22), transparent);
-    color:#fff;
+    color: #fff;
 }
 
-.cta-band h2{
-    font-size:clamp(2.3rem,4vw,4.5rem);
-    margin-bottom:24px;
+.cta-band h2 {
+    font-size: clamp(2.3rem, 4vw, 4.5rem);
+    margin-bottom: 24px;
 }
 
-.cta-band p{
-    max-width:720px;
-    margin:0 auto 32px;
-    color:rgba(255,255,255,.85);
+.cta-band p {
+    max-width: 720px;
+    margin: 0 auto 32px;
+    color: rgba(255,255,255,.85);
 }
 
 /* =========================================================
    CONTACT SECTION
 ========================================================= */
 
-.contact-panel{
+.contact-panel {
     background:
         radial-gradient(circle at top, rgba(239,194,118,.14), transparent 32%),
         linear-gradient(135deg, var(--signature-charcoal), var(--signature-black));
-    color:#fff;
-    text-align:center;
+    color: #fff;
+    text-align: center;
 }
 
-.contact-panel h2{
-    font-size:clamp(2.2rem,4vw,4rem);
+.contact-panel h2 {
+    font-size: clamp(2.2rem, 4vw, 4rem);
 }
 
-.contact-panel a{
-    color:var(--signature-gold-light);
+.contact-panel a {
+    color: var(--signature-gold-light);
 }
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
-.footer{
-    background:#fff;
-    border-top:1px solid var(--signature-border);
-    padding:60px 0 40px;
-    text-align:center;
+.footer {
+    background: #fff;
+    border-top: 1px solid var(--signature-border);
+    padding: 60px 0 40px;
+    text-align: center;
 }
 
-.footer-inner{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:28px;
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
 }
 
-.footer-logo{
-    width:180px;
-    margin:0 auto 14px;
+.footer-logo {
+    width: 180px;
+    margin: 0 auto 14px;
 }
 
-.footer-inner p{
-    max-width:620px;
-    margin:0 auto;
-    color:var(--signature-gray);
+.footer-inner p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--signature-gray);
 }
 
-.footer-links{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:22px;
-    flex-wrap:wrap;
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
 }
 
-.footer-links a{
-    text-transform:uppercase;
-    letter-spacing:.14em;
-    font-size:.78rem;
-    font-weight:700;
+.footer-links a {
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: .78rem;
+    font-weight: 700;
 }
 
 .footer-links a:hover,
-.footer-links a:focus{
-    color:var(--signature-gold);
+.footer-links a:focus {
+    color: var(--signature-gold);
 }
 
-.footer-bottom{
-    margin-top:40px;
-    padding-top:20px;
-    border-top:1px solid rgba(0,0,0,.08);
-    color:var(--signature-gray);
-    font-size:.9rem;
-    text-align:center;
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,.08);
+    color: var(--signature-gray);
+    font-size: .9rem;
+    text-align: center;
 }
 
-.footer-bottom p{
-    margin:0 auto;
+.footer-bottom p {
+    margin: 0 auto;
 }
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
-@media (max-width:1000px){
+@media (max-width: 1000px) {
 
     .card-grid,
-    .attorney-grid{
-        grid-template-columns:repeat(2,1fr);
+    .attorney-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .profile-grid{
-        grid-template-columns:minmax(280px,360px) minmax(0,1fr);
-        gap:28px;
+    .profile-grid {
+        grid-template-columns: 320px minmax(0,1fr);
+        gap: 28px;
     }
 
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .main-header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        padding:18px 0;
+    .main-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
     }
 
-    .site-nav{
-        width:100%;
+    .site-nav {
+        width: 100%;
     }
 
-    .hero-inner{
-        padding:60px 0 80px;
+    .hero-inner {
+        padding: 60px 0 80px;
     }
 
     .card-grid,
     .attorney-grid,
-    .profile-grid{
-        grid-template-columns:1fr;
+    .profile-grid {
+        grid-template-columns: 1fr;
     }
 
-    .attorney-photo{
-        height:360px;
+    .attorney-photo {
+        height: 360px;
     }
 
     .profile-grid .attorney-card,
-    .profile-grid .card{
-        height:auto;
+    .profile-grid .card {
+        height: auto;
     }
 
-    .profile-grid .attorney-photo{
-        height:auto;
+    .profile-grid .attorney-photo {
+        height: auto;
     }
 
-    .profile-grid .attorney-photo img{
-        height:auto;
-        object-fit:contain;
+    .profile-grid .attorney-photo img {
+        height: auto;
+        object-fit: contain;
     }
 
-    .profile-photo{
-        max-width:520px;
-        margin:0 auto;
+    .profile-photo {
+        max-width: 520px;
+        margin: 0 auto;
     }
 
-    .footer-inner{
-        flex-direction:column;
+    .footer-inner {
+        flex-direction: column;
     }
 
-    .footer-links{
-        flex-direction:column;
-        gap:12px;
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
     }
 
 }
 
-@media (max-width:480px){
+@media (max-width: 480px) {
 
-    .container{
-        width:min(100% - 24px, var(--container));
+    .container {
+        width: min(100% - 24px, var(--container));
     }
 
-    .hero h1{
-        font-size:2.3rem;
+    .hero h1 {
+        font-size: 2.3rem;
     }
 
-    .section{
-        padding:70px 0;
+    .section {
+        padding: 70px 0;
     }
 
 }
