@@ -503,15 +503,44 @@ main{
     align-items:start;
 }
 
-.profile-grid .card{
+.profile-grid .attorney-card{
+    transform:none;
+}
+
+.profile-grid .attorney-card:hover{
+    transform:none;
+}
+
+.profile-grid .attorney-photo{
     height:auto;
+    max-height:none;
+    overflow:visible;
+
+    background:#fff;
+}
+
+.profile-grid .attorney-photo img{
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+    object-position:center center;
+
+    transform:none;
+}
+
+.profile-grid .attorney-card:hover img{
+    transform:none;
+}
+
+.profile-grid .card{
+    min-height:100%;
 }
 
 .profile-photo{
     background:#fff;
     border:1px solid var(--signature-border);
     box-shadow:var(--shadow-md);
-    padding:0;
     overflow:hidden;
 }
 
@@ -519,34 +548,15 @@ main{
     width:100%;
     height:auto;
     display:block;
-    object-fit:contain;
-    object-position:center center;
 }
 
 .profile-summary{
     background:#fff;
     border:1px solid var(--signature-border);
     box-shadow:var(--shadow-md);
-    overflow:hidden;
-}
-
-.profile-summary .attorney-photo{
-    height:auto;
-    overflow:visible;
-}
-
-.profile-summary .attorney-photo img{
-    width:100%;
-    height:auto;
-    object-fit:contain;
-    object-position:center center;
 }
 
 .profile-summary:hover{
-    transform:none;
-}
-
-.profile-summary:hover img{
     transform:none;
 }
 
@@ -756,13 +766,18 @@ main{
         height:360px;
     }
 
+    .profile-grid .attorney-photo{
+        height:auto;
+    }
+
+    .profile-grid .attorney-photo img{
+        height:auto;
+        object-fit:contain;
+    }
+
     .profile-photo{
         max-width:520px;
         margin:0 auto;
-    }
-
-    .profile-summary .attorney-photo{
-        height:auto;
     }
 
     .footer-inner{
