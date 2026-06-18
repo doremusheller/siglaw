@@ -1,3 +1,4 @@
+
 /* =========================================================
    SIGNATURE LAW PARTNERS
    GLOBAL SITE STYLES
@@ -191,6 +192,8 @@ main {
     max-width: 860px;
     margin: 0 auto 18px;
     font-size: 1.15rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .hero .eyebrow {
@@ -233,6 +236,15 @@ main {
     color: var(--signature-gray);
     font-size: 1.1rem;
     max-width: 760px;
+}
+
+.section-lede,
+.profile-grid .card p,
+.regulated-copy p,
+.footer-inner p,
+.footer-bottom p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .btn,
@@ -298,6 +310,8 @@ main {
 
 .card p {
     color: var(--signature-gray);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .attorney-grid {
@@ -356,6 +370,8 @@ main {
 
 .attorney-content p {
     color: var(--signature-gray);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .attorney-meta {
@@ -453,6 +469,8 @@ main {
     max-width: 720px;
     margin: 0 auto 32px;
     color: rgba(255,255,255,.85);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .contact-panel {
