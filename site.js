@@ -89,7 +89,7 @@ function initializeCarousel(carousel) {
 
         stop();
 
-        timer = window.setInterval(next, 5000);
+        timer = window.setInterval(next, 8000);
 
     }
 
