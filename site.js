@@ -2,76 +2,92 @@
 =========================================================
 SIGNATURE LAW PARTNERS
 GLOBAL SITE SCRIPTS
-Version 1.0
+Version 1.1
 =========================================================
 */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initializeTestimonialCarousels();
+    const carousels = document.querySelectorAll(".testimonial-carousel");
+
+    carousels.forEach(initializeCarousel);
 
 });
 
-/*
-=========================================================
-TESTIMONIAL CAROUSELS
-=========================================================
-*/
+function initializeCarousel(carousel) {
 
-function initializeTestimonialCarousels() {
-
-    const carousels = document.querySelectorAll(".testimonial-carousel");
-
-    if (!carousels.length) {
-        return;
-    }
-
-    carousels.forEach(createCarousel);
-
-}
-
-function createCarousel(carousel) {
-
-    const slides = carousel.querySelectorAll(".testimonial-slide");
+    const slides = Array.from(
+        carousel.querySelectorAll(".testimonial-slide")
+    );
 
     if (slides.length <= 1) {
         return;
     }
 
-    let current = 0;
-    let interval = null;
+    let current = slides.findIndex(slide =>
+        slide.classList.contains("active")
+    );
+
+    if (current < 0) {
+        current = 0;
+        slides[0].classList.add("active");
+    }
+
+    /*
+    -----------------------------------------------------
+    CREATE DOTS
+    -----------------------------------------------------
+    */
+
+    const dotsContainer = document.createElement("div");
+    dotsContainer.className = "testimonial-dots";
+
+    const dots = [];
 
     slides.forEach((slide, index) => {
 
-        slide.classList.remove("active");
+        const dot = document.createElement("button");
 
-        if (index === 0) {
-            slide.classList.add("active");
+        dot.type = "button";
+        dot.className = "testimonial-dot";
+
+        dot.setAttribute(
+            "aria-label",
+            `Show testimonial ${index + 1}`
+        );
+
+        if (index === current) {
+            dot.classList.add("active");
         }
+
+        dot.addEventListener("click", () => {
+
+            goTo(index);
+            restart();
+
+        });
+
+        dots.push(dot);
+        dotsContainer.appendChild(dot);
 
     });
 
-    createDots();
+    carousel.parentNode.insertBefore(
+        dotsContainer,
+        carousel.nextSibling
+    );
 
-    startRotation();
+    /*
+    -----------------------------------------------------
+    SLIDE CONTROL
+    -----------------------------------------------------
+    */
 
-    carousel.addEventListener("mouseenter", stopRotation);
-    carousel.addEventListener("mouseleave", startRotation);
+    function goTo(index) {
 
-    carousel.addEventListener("focusin", stopRotation);
-    carousel.addEventListener("focusout", startRotation);
-
-    document.addEventListener("visibilitychange", () => {
-
-        if (document.hidden) {
-            stopRotation();
-        } else {
-            startRotation();
+        if (index === current) {
+            return;
         }
-
-    });
-
-    function showSlide(index) {
 
         slides[current].classList.remove("active");
         dots[current].classList.remove("active");
@@ -83,93 +99,78 @@ function createCarousel(carousel) {
 
     }
 
-    function nextSlide() {
+    function next() {
 
-        let next = current + 1;
+        let nextIndex = current + 1;
 
-        if (next >= slides.length) {
-            next = 0;
+        if (nextIndex >= slides.length) {
+            nextIndex = 0;
         }
 
-        showSlide(next);
+        goTo(nextIndex);
 
     }
-
-    function previousSlide() {
-
-        let previous = current - 1;
-
-        if (previous < 0) {
-            previous = slides.length - 1;
-        }
-
-        showSlide(previous);
-
-    }
-
-    function startRotation() {
-
-        stopRotation();
-
-        interval = window.setInterval(nextSlide, 8000);
-
-    }
-
-    function stopRotation() {
-
-        if (interval !== null) {
-
-            clearInterval(interval);
-            interval = null;
-
-        }
-
-    }
-
-    function createDots() {
-
-        const dotsContainer = document.createElement("div");
-        dotsContainer.className = "testimonial-dots";
-
-        slides.forEach((slide, index) => {
-
-            const dot = document.createElement("button");
-
-            dot.type = "button";
-            dot.className = "testimonial-dot";
-
-            dot.setAttribute(
-                "aria-label",
-                `Show testimonial ${index + 1}`
-            );
-
-            if (index === 0) {
-                dot.classList.add("active");
-            }
-
-            dot.addEventListener("click", () => {
-
-                showSlide(index);
-                startRotation();
-
-            });
-
-            dotsContainer.appendChild(dot);
-
-        });
-
-        carousel.after(dotsContainer);
-
-        dots = dotsContainer.querySelectorAll(".testimonial-dot");
-
-    }
-
-    let dots = [];
 
     /*
-    =========================================================
-    OPTIONAL KEYBOARD SUPPORT
-    =========================================================
+    -----------------------------------------------------
+    AUTO ROTATION
+    -----------------------------------------------------
+    */
+
+    let timer = null;
+
+    function start() {
+
+        stop();
+
+        timer = window.setInterval(next, 8000);
+
+    }
+
+    function stop() {
+
+        if (timer !== null) {
+
+            clearInterval(timer);
+            timer = null;
+
+        }
+
+    }
+
+    function restart() {
+
+        stop();
+        start();
+
+    }
+
+    /*
+    -----------------------------------------------------
+    EVENTS
+    -----------------------------------------------------
+    */
+
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+
+    carousel.addEventListener("focusin", stop);
+    carousel.addEventListener("focusout", start);
+
+    document.addEventListener("visibilitychange", () => {
+
+        if (document.hidden) {
+            stop();
+        } else {
+            start();
+        }
+
+    });
+
+    /*
+    -----------------------------------------------------
+    KEYBOARD SUPPORT
+    -----------------------------------------------------
     */
 
     carousel.setAttribute("tabindex", "0");
@@ -178,18 +179,32 @@ function createCarousel(carousel) {
 
         if (event.key === "ArrowRight") {
 
-            nextSlide();
-            startRotation();
+            next();
+            restart();
 
         }
 
         if (event.key === "ArrowLeft") {
 
-            previousSlide();
-            startRotation();
+            let previous = current - 1;
+
+            if (previous < 0) {
+                previous = slides.length - 1;
+            }
+
+            goTo(previous);
+            restart();
 
         }
 
     });
+
+    /*
+    -----------------------------------------------------
+    START
+    -----------------------------------------------------
+    */
+
+    start();
 
 }
