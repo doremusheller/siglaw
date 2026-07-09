@@ -472,18 +472,6 @@ main {
     animation: testimonialFade .35s ease both;
 }
 
-.testimonial-slide::before {
-    content: "“";
-    position: absolute;
-    top: -36px;
-    left: 34px;
-    font-size: 12rem;
-    line-height: 1;
-    color: rgba(201,151,74,.13);
-    font-weight: 700;
-    pointer-events: none;
-}
-
 .testimonial-slide::after {
     content: "";
     position: absolute;
@@ -527,66 +515,6 @@ main {
 
 .testimonial-slide footer strong {
     font-weight: 700;
-}
-
-.testimonial-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 26px;
-}
-
-.testimonial-prev,
-.testimonial-next {
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--signature-border);
-    border-radius: 999px;
-    background: #fff;
-    color: var(--signature-charcoal);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-    box-shadow: var(--shadow-sm);
-}
-
-.testimonial-prev:hover,
-.testimonial-next:hover,
-.testimonial-prev:focus,
-.testimonial-next:focus {
-    background: var(--signature-gold);
-    color: var(--signature-black);
-    border-color: var(--signature-gold);
-    transform: translateY(-2px);
-}
-
-.testimonial-dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 24px;
-}
-
-.testimonial-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 999px;
-    border: 1px solid var(--signature-gold);
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.testimonial-dot.active,
-.testimonial-dot:hover,
-.testimonial-dot:focus {
-    background: var(--signature-gold);
-    transform: scale(1.15);
 }
 
 @keyframes testimonialFade {
@@ -763,12 +691,6 @@ main {
         min-height: 380px;
     }
 
-    .testimonial-slide::before {
-        font-size: 9rem;
-        left: 18px;
-        top: -22px;
-    }
-
     .testimonial-slide blockquote p {
         font-size: 1rem;
         line-height: 1.75;
@@ -806,16 +728,6 @@ main {
 
     .testimonial-slide footer {
         font-size: .78rem;
-    }
-
-    .testimonial-controls {
-        gap: 12px;
-    }
-
-    .testimonial-prev,
-    .testimonial-next {
-        width: 40px;
-        height: 40px;
     }
 
 }
