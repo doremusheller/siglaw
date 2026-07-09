@@ -2,7 +2,7 @@
 =========================================================
 SIGNATURE LAW PARTNERS
 GLOBAL SITE SCRIPTS
-Version 1.1
+Version 1.2
 =========================================================
 */
 
@@ -35,50 +35,6 @@ function initializeCarousel(carousel) {
 
     /*
     -----------------------------------------------------
-    CREATE DOTS
-    -----------------------------------------------------
-    */
-
-    const dotsContainer = document.createElement("div");
-    dotsContainer.className = "testimonial-dots";
-
-    const dots = [];
-
-    slides.forEach((slide, index) => {
-
-        const dot = document.createElement("button");
-
-        dot.type = "button";
-        dot.className = "testimonial-dot";
-
-        dot.setAttribute(
-            "aria-label",
-            `Show testimonial ${index + 1}`
-        );
-
-        if (index === current) {
-            dot.classList.add("active");
-        }
-
-        dot.addEventListener("click", () => {
-
-            goTo(index);
-            restart();
-
-        });
-
-        dots.push(dot);
-        dotsContainer.appendChild(dot);
-
-    });
-
-    carousel.parentNode.insertBefore(
-        dotsContainer,
-        carousel.nextSibling
-    );
-
-    /*
-    -----------------------------------------------------
     SLIDE CONTROL
     -----------------------------------------------------
     */
@@ -90,12 +46,10 @@ function initializeCarousel(carousel) {
         }
 
         slides[current].classList.remove("active");
-        dots[current].classList.remove("active");
 
         current = index;
 
         slides[current].classList.add("active");
-        dots[current].classList.add("active");
 
     }
 
@@ -111,6 +65,18 @@ function initializeCarousel(carousel) {
 
     }
 
+    function previous() {
+
+        let previousIndex = current - 1;
+
+        if (previousIndex < 0) {
+            previousIndex = slides.length - 1;
+        }
+
+        goTo(previousIndex);
+
+    }
+
     /*
     -----------------------------------------------------
     AUTO ROTATION
@@ -123,7 +89,7 @@ function initializeCarousel(carousel) {
 
         stop();
 
-        timer = window.setInterval(next, 8000);
+        timer = window.setInterval(next, 5000);
 
     }
 
@@ -186,13 +152,7 @@ function initializeCarousel(carousel) {
 
         if (event.key === "ArrowLeft") {
 
-            let previous = current - 1;
-
-            if (previous < 0) {
-                previous = slides.length - 1;
-            }
-
-            goTo(previous);
+            previous();
             restart();
 
         }
