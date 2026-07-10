@@ -451,7 +451,41 @@ main {
     margin: 0 auto;
     position: relative;
 }
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
 
+.testimonial-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid var(--signature-gold);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.testimonial-dot:hover,
+.testimonial-dot:focus-visible {
+    background: rgba(201,151,74,.35);
+    outline: none;
+}
+
+.testimonial-dot.active {
+    background: var(--signature-gold);
+    transform: scale(1.15);
+}
+
+.testimonial-dot:focus-visible {
+    box-shadow: 0 0 0 4px rgba(201,151,74,.25);
+}
 .testimonial-slide {
     display: none;
     position: relative;
