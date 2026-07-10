@@ -1,8 +1,9 @@
+
 /*
 =========================================================
 SIGNATURE LAW PARTNERS
 GLOBAL SITE SCRIPTS
-Version 1.2
+Version 1.3
 =========================================================
 */
 
@@ -35,9 +36,58 @@ function initializeCarousel(carousel) {
 
     /*
     -----------------------------------------------------
+    DOT NAVIGATION
+    -----------------------------------------------------
+    */
+
+    const dotsContainer = document.createElement("div");
+    dotsContainer.className = "testimonial-dots";
+
+    const dots = slides.map((slide, index) => {
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "testimonial-dot";
+        button.setAttribute(
+            "aria-label",
+            `Go to testimonial ${index + 1}`
+        );
+
+        if (index === current) {
+            button.classList.add("active");
+        }
+
+        button.addEventListener("click", () => {
+
+            goTo(index);
+            restart();
+
+        });
+
+        dotsContainer.appendChild(button);
+
+        return button;
+
+    });
+
+    carousel.after(dotsContainer);
+
+    /*
+    -----------------------------------------------------
     SLIDE CONTROL
     -----------------------------------------------------
     */
+
+    function updateDots() {
+
+        dots.forEach((dot, index) => {
+
+            dot.classList.toggle("active", index === current);
+
+        });
+
+    }
 
     function goTo(index) {
 
@@ -50,6 +100,8 @@ function initializeCarousel(carousel) {
         current = index;
 
         slides[current].classList.add("active");
+
+        updateDots();
 
     }
 
@@ -168,3 +220,6 @@ function initializeCarousel(carousel) {
     start();
 
 }
+
+
+This version is a drop-in replacement for your current `site.js`. The only remaining step is to add the corresponding CSS for `.testimonial-dots` and `.testimonial-dot` to your stylesheet.
