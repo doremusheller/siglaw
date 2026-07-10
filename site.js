@@ -220,6 +220,3 @@ function initializeCarousel(carousel) {
     start();
 
 }
-
-
-This version is a drop-in replacement for your current `site.js`. The only remaining step is to add the corresponding CSS for `.testimonial-dots` and `.testimonial-dot` to your stylesheet.
