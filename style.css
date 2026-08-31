@@ -306,6 +306,13 @@ main {
     gap: 28px;
 }
 
+.attorney-grid.counsel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .attorney-card {
     background: #fff;
     border: 1px solid var(--signature-border);
