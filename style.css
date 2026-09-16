@@ -307,8 +307,8 @@ main {
 }
 
 .attorney-grid.counsel-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 900px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
 }
@@ -667,7 +667,8 @@ main {
 @media (max-width: 1000px) {
 
     .card-grid,
-    .attorney-grid {
+    .attorney-grid,
+    .attorney-grid.counsel-grid {
         grid-template-columns: repeat(2,1fr);
     }
 
@@ -701,6 +702,7 @@ main {
 
     .card-grid,
     .attorney-grid,
+    .attorney-grid.counsel-grid,
     .profile-grid {
         grid-template-columns: 1fr;
     }
