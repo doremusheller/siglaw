@@ -235,6 +235,34 @@ main {
     max-width: 760px;
 }
 
+.attorney-leadership {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.attorney-leadership .section-lede {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.attorney-leadership .recognition {
+    max-width: 820px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--signature-border);
+    font-style: italic;
+}
+
+.attorney-leadership .recognition a {
+    color: var(--signature-charcoal);
+}
+
+.attorney-leadership .recognition a:hover,
+.attorney-leadership .recognition a:focus {
+    color: var(--signature-gold);
+}
+
 .btn,
 .button,
 .ghost-btn {
