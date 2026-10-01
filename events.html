@@ -24,12 +24,12 @@
         .event-slide { display: none; margin: 0; }
         .event-slide.is-active { display: block; }
         .event-slide img {
-            display: block; width: 100%; height: clamp(300px, 58vw, 650px);
-            object-fit: contain; background: #111;
-        }
-        .event-slide figcaption {
-            padding: 15px 20px; background: #fff; color: var(--signature-charcoal);
-            text-align: center; font-size: 1rem;
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: min(76vh, 900px);
+            object-fit: contain;
+            background: #fff;
         }
         .event-carousel-controls {
             display: flex; align-items: center; justify-content: center; gap: 18px;
@@ -94,39 +94,39 @@
                 <div class="event-carousel-viewport" aria-live="polite">
                                     <figure class="event-slide is-active" aria-hidden="false">
                     <img src="assets/eventpics/amber1.jpeg" alt="amber 1" fetchpriority="high" decoding="async">
-                    <figcaption>amber 1</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/groupstage1.jpeg" alt="groupstage 1" loading="lazy" decoding="async">
-                    <figcaption>groupstage 1</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/jimspeak1.jpg" alt="jimspeak 1" loading="lazy" decoding="async">
-                    <figcaption>jimspeak 1</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/jimspeak2.jpg" alt="jimspeak 2" loading="lazy" decoding="async">
-                    <figcaption>jimspeak 2</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/melandjim.jpeg" alt="melandjim" loading="lazy" decoding="async">
-                    <figcaption>melandjim</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/meljimamber.jpeg" alt="meljimamber" loading="lazy" decoding="async">
-                    <figcaption>meljimamber</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/outsidegroup.jpeg" alt="outsidegroup" loading="lazy" decoding="async">
-                    <figcaption>outsidegroup</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/speakerlist.jpeg" alt="speakerlist" loading="lazy" decoding="async">
-                    <figcaption>speakerlist</figcaption>
+
                 </figure>
                 <figure class="event-slide" aria-hidden="true">
                     <img src="assets/eventpics/wholeteam.jpeg" alt="wholeteam" loading="lazy" decoding="async">
-                    <figcaption>wholeteam</figcaption>
+
                 </figure>
                 </div>
                 <div class="event-carousel-controls">
