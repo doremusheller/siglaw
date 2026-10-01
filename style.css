@@ -237,6 +237,21 @@ main {
     margin-right: auto;
 }
 
+.page-section-content {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-section-content .section-lede {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-centered-lede {
+    text-align: center;
+}
+
 .attorney-leadership {
     max-width: 920px;
     margin: 0 auto;
