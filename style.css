@@ -893,3 +893,77 @@ main {
         width: 100%;
     }
 }
+
+
+/* Homepage licensed states band */
+.licensed-states {
+    background: #fff;
+    border-top: 1px solid var(--signature-border);
+    border-bottom: 1px solid var(--signature-border);
+    padding: 28px 0 30px;
+    text-align: center;
+}
+
+.licensed-states-inner {
+    max-width: 1060px;
+}
+
+.licensed-states-label {
+    color: var(--signature-gold);
+    font-family: Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    line-height: 1.4;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+}
+
+.licensed-states-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.licensed-states-list li {
+    color: var(--signature-charcoal);
+    font-family: Arial, sans-serif;
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: .015em;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.licensed-states-list li + li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 0 17px;
+    vertical-align: -2px;
+    background: var(--signature-gold);
+}
+
+@media (max-width: 600px) {
+    .licensed-states {
+        padding: 24px 0;
+    }
+
+    .licensed-states-list {
+        gap: 12px 0;
+    }
+
+    .licensed-states-list li {
+        font-size: .8rem;
+    }
+
+    .licensed-states-list li + li::before {
+        margin: 0 10px;
+    }
+}
